@@ -22,8 +22,10 @@ db.init_app(app)
 jwt = JWTManager(app)
 bcrypt = Bcrypt(app)
 
-CORS(app)
-
+CORS(app, origins=[
+    "http://localhost:5173",
+    "https://crm-frontend.onrender.com"
+])
 with app.app_context():
     db.create_all()
 
