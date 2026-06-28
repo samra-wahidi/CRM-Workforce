@@ -11,7 +11,6 @@ from flask_jwt_extended import (
     get_jwt
 )
 from config import Config
-from models import db, User
 from sqlalchemy import func
 
 app = Flask(__name__)
